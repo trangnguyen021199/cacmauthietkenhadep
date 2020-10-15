@@ -14,8 +14,11 @@
 
     <!--[if(IE 7)]>
 <style type="text/css">
+#sidebar-subscribe-box{
+filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#818194', endColorstr='#e7e5e6');
+}
 header a.search{
-background-color:#514b49; 
+background-color:$(header.search); 
 background-image:url(http://4.bp.blogspot.com/-GTfJlUm0qtk/UmkOjvFKpJI/AAAAAAAAA5M/U1pPIQPMw48/s1600/masqoli.png);
 background-repeat:no-repeat;
 }
@@ -33,6 +36,9 @@ padding:0 50px;
 
     <!--[if(IE 8)]>
 <style type="text/css">
+#sidebar-subscribe-box{
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#818194', endColorstr='#e7e5e6')";
+}
 .ie7_8{
 padding:0 50px;
 }
@@ -53,57 +59,152 @@ padding:0 50px;
     <b:skin><![CDATA[/*
 -----------------------------------------------
 Blogger Template Style
-Name: Masqoli
-Version: 1.1.0
+Name: Masqoli | Shared By Themes24x7.com
+Version: 1.3
 Designer: Zillur Rahman
 URL: http://themeforest.net/user/Jillur_rahman
 ----------------------------------------------- */
 /* Variable definitions
-====================
-<Variable name="bgcolor" description="Page Background Color"
-type="color" default="#eee" value="#eeeeee">
-<Variable name="textcolor" description="Text Color"
-type="color" default="#333" value="#333333">
-<Variable name="linkcolor" description="Link Color"
-type="color" default="#1a6a51" value="#1a6a51">
-<Variable name="pagetitlecolor" description="Blog Title Color"
-type="color" default="#000" value="#000000">
-<Variable name="descriptioncolor" description="Blog Description Color"
-type="color" default="#000" value="#000000">
-<Variable name="titlecolor" description="Post Title Color"
-type="color" default="#333" value="#333333">
-<Variable name="bordercolor" description="Border Color"
-type="color" default="#ccc" value="#cccccc">
-<Variable name="sidebarcolor" description="Sidebar Title Color"
-type="color" default="#333" value="#333333">
-<Variable name="sidebartextcolor" description="Sidebar Text Color"
-type="color" default="#666" value="#666666">
-<Variable name="visitedlinkcolor" description="Visited Link Color"
-type="color" default="#999" value="#999999">
-<Variable name="posttitlefont" description="Post title Font"
-type="font"
-default="normal normal 141% Arial, sans-serif" value="normal normal 141% Arial, sans-serif">
-<Variable name="dateheaderfont" description="Date Header Font"
-type="font"
-default="normal normal 86% Arial, sans-serif" value="normal normal 86% Arial, sans-serif">
-<Variable name="bodyfont" description="Text Font"
-type="font" default="normal normal 100% Arial, sans-serif" value="normal normal 100% Arial, sans-serif">
-<Variable name="headerfont" description="Sidebar Title Font"
-type="font"
-default="normal normal 141% Arial, sans-serif" value="normal normal 141% Arial, sans-serif">
-<Variable name="pagetitlefont" description="Blog Title Font"
-type="font"
-default="normal normal 200% Arial, sans-serif" value="normal normal 200% Arial, sans-serif">
-<Variable name="descriptionfont" description="Blog Description Font"
-type="font"
-default="normal normal 95% Arial, sans-serif" value="normal normal 95% Arial, sans-serif">
-<Variable name="postfooterfont" description="Post Footer Font"
-type="font"
-default="normal normal 86% Arial, sans-serif" value="normal normal 86% Arial, sans-serif">
-<Variable name="startSide" description="Side where text starts in blog language"
-type="automatic" default="left" value="left">
-<Variable name="endSide" description="Side where text ends in blog language"
-type="automatic" default="right" value="right">
+===================
+<Group description="Body" selector="body">
+<Variable name="body.background.color" description="Background Color" type="color" default="#eee" value="#eeeeee"/>
+<Variable name="body.font" description="Body Font" type="font" default="13px/1.5 Arial, Helvetica, sans-serif" value="13px/1.5 Arial, Helvetica, sans-serif"/>
+</Group>
+<Group description="Header Color" selector="body">
+<Variable name="header.background.color" description="Background Color" type="color" default="#363231" value="#363231"/>
+<Variable name="header.border.color" description="Border Bottom Color" type="color" default="#373d40" value="#373d40"/>
+</Group>
+<Group description="Header Shadow Color" selector="body">
+<Variable name="header.boxshadow1.color" description="Bottom Inside Color" type="color" default="#3e4b51" value="#3e4b51"/>
+<Variable name="header.boxshadow3.color" description="Bottom Outside Color" type="color" default="#bbb" value="#bbbbbb"/>
+<Variable name="header.boxshadow2.color" description="Round color" type="color" default="#384348" value="#384348"/>
+</Group>
+<Group description="Header Logo Area Font without Image" selector="body">
+<Variable name="header.logo.font" description="Logo Font" type="font" default="40px/1 'Open Sans Condensed', sans-serif" value="40px/1 'Open Sans Condensed', sans-serif"/>
+<Variable name="header.logo.font.color" description="Logo Font Color" type="color" default="#da431c" value="#da431c"/>
+</Group>
+<Group description="Header Menu Font Area" selector="body">
+<Variable name="header.font" description="Menu Font" type="font" default="18px/1 'Open Sans Condensed', sans-serif" value="18px/1 'Open Sans Condensed', sans-serif"/>
+<Variable name="header.font.color" description="Menu Font Color" type="color" default="#fff" value="#ffffff"/>
+<Variable name="header.font.hover.color" description="Menu Font Hover Color" type="color" default="#eee" value="#eeeeee"/>
+</Group>
+<Group description="Header Search Button Color" selector="body">
+<Variable name="header.search" description="Background Color" type="color" default="#514b49" value="#514b49"/>
+<Variable name="header.search.hover" description="Hover Color" type="color" default="#5e5755" value="#5e5755"/>
+<Variable name="header.search.active" description="Active Color" type="color" default="#514b49" value="#514b49"/>
+<Variable name="header.search.icon" description="Icon Color" type="color" default="#fff" value="#ffffff"/>
+</Group>
+<Group description="Title Font" selector="body">
+<Variable name="post.title" description="Title Font" type="font" default="normal normal 141% Arial, sans-serif" value="normal normal 141% Arial, sans-serif"/>
+</Group>
+<Group description="Post Color" selector="body">
+<Variable name="post.background.color" description="Post Background Color" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="post.title.font.color" description="Post Title Color" type="color" default="#333" value="#333333"/>
+<Variable name="post.text.font.color" description="Post Text Color" type="color" default="#666" value="#666666"/>
+<Variable name="post.body.link.font.color" description="Post Body Link Color" type="color" default="#1a6a51" value="#1a6a51"/>
+</Group>
+<Group description="Sidebar" selector="body">
+<Variable name="sidebar.background.color" description="Sidebar Background Color" type="color" default="#f7f7f7" value="#f7f7f7"/>
+<Variable name="sidebar.widget.background.color" description="Widget Background Color" type="color" default="#fff" value="#ffffff"/>
+<Variable name="sidebar.widget.border.color" description="Widget Border Bottom Color" type="color" default="#eee" value="#eeeeee"/>
+</Group>
+<Group description="Sidebar Font Color" selector="body">
+<Variable name="sidebar.title.color" description="Title Color" type="color" default="#555" value="#555555"/>
+<Variable name="sidebar.link.color" description="Link Color" type="color" default="#888" value="#888888"/>
+<Variable name="sidebar.Social.text.color" description="Social Text Color" type="color" default="#747474" value="#747474"/>
+</Group>
+<Group description="Footer" selector="body">
+<Variable name="foot.background.color" description="Background Color" type="color" default="#fafafa" value="#fafafa"/>
+<Variable name="foot.border.color" description="Border Top Color" type="color" default="#d6d6d6" value="#d6d6d6"/>
+</Group>
+<Group description="Footer Title Color" selector="body">
+<Variable name="footer.title.color" description="Footer Title Color" type="color" default="#6d6d6d" value="#6d6d6d"/>
+<Variable name="footer.nav.color" description="Footer Nav Menu Color" type="color" default="#777" value="#777777"/>
+</Group>
+<Group description="Footer Text Color" selector="body">
+<Variable name="footer.text.font.color" description="Footer Text Color" type="color" default="#6d6d6d" value="#6d6d6d"/>
+<Variable name="footer.nav.text.color" description="Footer Copyright Text Color" type="color" default="#999" value="#999999"/>
+</Group>
+<Group description="Read More Button" selector="body">
+<Variable name="read.background.color" description="Background Color" type="color" default="#363231" value="#363231"/>
+<Variable name="read.hover.color" description="Hover Color" type="color" default="#514b49" value="#514b49"/>
+<Variable name="read.shadow.inside.color" description="Shadow Inside Color" type="color" default="#514b49" value="#514b49"/>
+<Variable name="read.shadow.outside.color" description="Shadow Outside Color" type="color" default="#eee" value="#eeeeee"/>
+</Group>
+<Group description="Read More Text Color" selector="body">
+<Variable name="read.text.color" description="Read More Text Color" type="color" default="#fff" value="#ffffff"/>
+</Group>
+<Group description="Active Page Number" selector="body">
+<Variable name="active.backgroundNavigation.color" description="Background Color" type="color" default="#363231" value="#363231"/>
+<Variable name="active.text.color" description="Text Color" type="color" default="#fff" value="#ffffff"/>
+</Group>
+<Group description="Unactive Page Number" selector="body">
+<Variable name="Unactive.backgroundNavigation.color" description="Background Color" type="color" default="#f2f2f2" value="#f2f2f2"/>
+<Variable name="Unactive.Border.color" description="Border Color" type="color" default="#ddd" value="#dddddd"/>
+<Variable name="Unactive.text.color" description="Text Color" type="color" default="#222" value="#222222"/>
+</Group>
+<Group description="Blue Button" selector="body">
+<Variable name="blue.background.color" description="Background Color" type="color" default="#93d0ea" value="#93d0ea"/>
+<Variable name="blue.shadowinside.color" description="Shadow Inside Color" type="color" default="#8fcde7" value="#8fcde7"/>
+<Variable name="blue.shadowoutside.color" description="Shadow Outside Color" type="color" default="#eee" value="#eeeeee"/>
+</Group>
+<Group description="Red Button" selector="body">
+<Variable name="red.background.color" description="Background Color" type="color" default="#f4836a" value="#f4836a"/>
+<Variable name="red.shadowinside.color" description="Shadow Inside Color" type="color" default="#ef7f65" value="#ef7f65"/>
+<Variable name="red.shadowoutside.color" description="Shadow Outside Color" type="color" default="#eee" value="#eeeeee"/>
+</Group>
+<Group description="Green Button" selector="body">
+<Variable name="green.background.color" description="Background Color" type="color" default="#a5d16d" value="#a5d16d"/>
+<Variable name="green.shadowinside.color" description="Shadow Inside Color" type="color" default="#a4cf6c" value="#a4cf6c"/>
+<Variable name="green.shadowoutside.color" description="Shadow Outside Color" type="color" default="#eee" value="#eeeeee"/>
+</Group>
+<Group description="Blue Red Green Text Color" selector="body">
+<Variable name="blueredgreen.text.color" description="Text Color" type="color" default="#fff" value="#ffffff"/>
+</Group>
+<Group description="Author Info" selector="body">
+<Variable name="author.info.background.color" description="Background Color" type="color" default="#fbfbfb" value="#fbfbfb"/>
+<Variable name="author.info.border.color" description="Border Color" type="color" default="#f0f0f0" value="#f0f0f0"/>
+</Group>
+<Group description="Author Info Image" selector="body">
+<Variable name="author.info.img.background.color" description="Image Background Color" type="color" default="#dedede" value="#dedede"/>
+<Variable name="author.info.img.box.shadow.color" description="Image Box-shadow Color" type="color" default="#888" value="#888888"/>
+</Group>
+<Group description="Related Posts" selector="body">
+<Variable name="related.posts.background.color" description="Background Color" type="color" default="#fff" value="#ffffff"/>
+<Variable name="related.title.color" description="Related Title Color" type="color" default="#333" value="#333333"/>
+<Variable name="related.posts.link.color" description="Related Link Color" type="color" default="#555" value="#555555"/>
+</Group>
+<Group description="Comments Count Color" selector="body">
+<Variable name="comments.count.color" description="Count Text Color" type="color" default="#585858" value="#585858"/>
+<Variable name="comments.border.color" description="Border Bottom Color" type="color" default="#ddd" value="#dddddd"/>
+</Group>
+<Group description="Comment Header" selector="body">
+<Variable name="comment.header.name.background.color" description="Name Background Color" type="color" default="#fff" value="#ffffff"/>
+<Variable name="comment.header.date.background.color" description="Date Background Color" type="color" default="#2B547E" value="#2B547E"/>
+<Variable name="comment.header.name.text.color" description="Name text Color" type="color" default="#292929" value="#292929"/>
+<Variable name="comment.header.date.text.color" description="Date text Color" type="color" default="#292929" value="#292929"/>
+</Group>
+<Group description="Comment Content" selector="body">
+<Variable name="comment.content.text.color" description="Text Color" type="color" default="#333" value="#333333"/>
+<Variable name="comment.content.link.color" description="Link Color" type="color" default="#949494" value="#949494"/>
+<Variable name="comment.content.reply.color" description="Reply link Color" type="color" default="#292929" value="#292929"/>
+</Group>
+<Group description="Email Subscription V1.3" selector="body">
+<Variable name="email.left.background.color" description="Right Background Color" type="color" default="#e7e5e6" value="#e7e5e6"/>
+<Variable name="email.right.background.color" description="Left Background Color" type="color" default="#818194" value="#818194"/>
+<Variable name="email.border.color" description="Border Color" type="color" default="#eee" value="#eeeeee"/>
+<Variable name="email.text.color" description="Text Color" type="color" default="#292929" value="#292929"/>
+</Group>
+<Group description="Email Subscription Mail Form V1.3" selector="body">
+<Variable name="email.form.background.color" description="Background Color" type="color" default="#fff" value="#ffffff"/>
+<Variable name="email.form.text.color" description="Text Color" type="color" default="#333" value="#333333"/>
+</Group>
+<Group description="Email Subscription Submit Button V1.3" selector="body">
+<Variable name="email.submit.background.color" description="Background Color" type="color" default="#363231" value="#363231"/>
+<Variable name="email.submit.hover.color" description="Hover Color" type="color" default="#433e3d" value="#433e3d"/>
+<Variable name="email.submit.shadow.color" description="Inset Shadow Color" type="color" default="#eee" value="#eeeeee"/>
+<Variable name="email.submit.text.color" description="Text Color" type="color" default="#fff" value="#ffffff"/>
+</Group>
 */
 /* http://meyerweb.com/eric/tools/css/reset/ 
 ---------------------------------
@@ -155,9 +256,9 @@ table {
 }
 /* Use this with templates/template-twocol.html */
 body{
-background:#eeeeee;
+background:$(body.background.color);
 color:#333333;
-font:13px/1.5 "Helvetica", Arial, sans-serif;
+font:$(body.font);
 word-wrap:break-word;
 }
 a:link {
@@ -182,9 +283,9 @@ border:0;
 -----------------------------------------------
 */
 .header-wrapper{
-background: #363231;
-box-shadow:0pt -1px 0pt #3e4b51 inset, 0pt 0pt 15px #384348 inset, 0pt 1px 1px #bbbbbb;
-border-bottom:1px solid #373d40;
+background:$(header.background.color);
+box-shadow:0pt -1px 0pt $(header.boxshadow1.color) inset, 0pt 0pt 15px $(header.boxshadow2.color) inset, 0pt 1px 1px $(header.boxshadow3.color);
+border-bottom:1px solid $(header.border.color);
 }
 header {
 padding:10px;
@@ -202,8 +303,8 @@ margin-top:-20px;
 left:50%;
 }
 h1 a#logo{
-font:40px/1 'Open Sans Condensed', sans-serif;
-color:#da431c;
+font:$(header.logo.font);
+color:$(header.logo.font.color);
 font-weight:bold;
 text-decoration:none;
 }
@@ -217,7 +318,7 @@ cursor:default;
 header nav a{
 color:#ea6a51;
 font-weight:bold;
-font:22px/1 'Open Sans Condensed', sans-serif;
+font:$(header.font);
 display:inline-block;
 margin:0 22px 10px 22px;
 text-decoration:none;
@@ -226,10 +327,17 @@ position:relative
 header nav a:hover{
 color:#ffffff;
 }
+.navlink a{
+color:$(header.font.color);
+font-weight:bold;
+}
+.navlink a:hover{
+color:$(header.font.hover.color);
+}
 header a.search{
 width:40px;
 height:40px;
-background-color:#514b49; 
+background-color:$(header.search); 
 cursor:pointer;
 position:absolute;
 border-radius:3px;
@@ -245,7 +353,7 @@ content:'';
 border-radius:50%;
 -moz-border-radius:50%;
 -webkit-border-radius:50%;
-border:2px solid #fff;
+border:2px solid $(header.search.icon);
 width:9px;
 height:9px;
 top:11px;
@@ -254,7 +362,7 @@ left:12px;
 header a.search:after{
 position:absolute;
 content:'';
-background-color:#fff;
+background-color:$(header.search.icon);
 width:2px;
 height:11px;
 top:20px;
@@ -267,11 +375,11 @@ left:25px;
 transform:rotate(-44deg);
 }
 header a.search:hover{
-background-color:#5e5755;
+background-color:$(header.search.hover);
 }
 header a.search.active{
 border-radius:0 3px 3px 0;
-background-color:#514b49;
+background-color:$(header.search.active);
 }
 header a.search.active form{
 display:block
@@ -290,20 +398,13 @@ width:210px;
 border-radius:2px 0 0 2px;
 height:19px
 }
-.navlink a{
-color:#fff !important;
-font-weight:bold;
-font-size:18px;
-}
-.navlink a:hover{
-color:#eee !important;
-}
 /* Layout
 --------------------*/
 body#layout {display:inline-block}
 body#layout header {width: 865px;}
 body#layout .outer-wrapper {width: 865px;margin:0}
 body#layout .main-wrapper {width: 70%;}
+body#layout .Subscriber .widget-content {margin:10px 0 0}
 body#layout .sidebar-wrapper {width: 27%;float: right;margin: 0;}
 body#layout footer{width:865px;padding:50px 0 40px;}
 body#layout footer .footer-sidebar{width: 865px;float: left;}
@@ -321,9 +422,9 @@ word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
 overflow: hidden;     /* fix for long non-text content breaking IE sidebar float */
 }
 .sidebar-wrapper {
-background:#f7f7f7;
+background:$(sidebar.background.color);
 width:30%;
-float: right;
+float:right;
 word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
 overflow: hidden;      /* fix for long non-text content breaking IE sidebar float */
 }
@@ -331,14 +432,14 @@ overflow: hidden;      /* fix for long non-text content breaking IE sidebar floa
 ----------------------------------------------- */
 h2 {
 margin:1.5em 0 .75em;
-font:normal normal 141% Arial, sans-serif;
+font:$(post.title);
 color:#333333;
 }
 /* Posts
 -----------------------------------------------
 */
-.post {
-background:#ffffff;
+.post{
+background:$(post.background.color);
 box-shadow:0 0 1px rgb(204,204,204);
 margin-bottom:3%;
 -webkit-border-radius:3px;
@@ -352,25 +453,24 @@ overflow: hidden;      /* fix for long non-text content breaking IE sidebar floa
 .post h2 {
 border-bottom:1px solid #dedede;
 margin:.25em 0 0;
-padding: 2em 4.4em;
-font: normal normal 141% Arial, sans-serif;
-color:#333333;
+padding: 2em 72px;
+color:$(post.title.font.color);
 }
 .post h2 a, .post h2 a:visited, .post h2 strong {
 display:block;
 text-decoration:none;
-color:#333333;
+color:$(post.title.font.color);
 }
 .post h2 strong, .post h2 a:hover {
-color:#333333;
+color:$(post.title.font.color);
 }
-.post-body {
-color:#666666;
+.post-body{
+color:$(post.text.font.color);
 padding: 3em 5em 5em 5em;
 line-height:1.6em;
 }
 .post-body a {
-color:#1a6a51;
+color:$(post.body.link.font.color);
 text-decoration:underline;
 }
 .post img {
@@ -381,6 +481,14 @@ margin-bottom:8px;
 .widget iframe, .widget img {
 max-width:100%;
 }
+.date-header {
+background:url(http://2.bp.blogspot.com/-LtL0QV6cIvU/Um-1TD7g5ZI/AAAAAAAAA-w/TrZ0-TFj29g/s1600/icon_clock.png) no-repeat left;
+color:$(post.title.font.color);
+padding: 5px 15px 5px 20px;  
+margin:10px 0 10px 25px;
+display:inline-block;
+opacity:0.5;
+}
 .post-footer {
 display:none;
 margin: .75em 0;
@@ -388,11 +496,8 @@ color:#333333;
 font: normal normal 86% Arial, sans-serif;
 }
 #author-info {
-background-color:#fbfbfb;
-border-top:1px solid #f0f0f0;
-border-right:1px solid #f0f0f0;
-border-bottom:1px solid #f0f0f0;
-border-left:1px solid #f0f0f0;
+background-color:$(author.info.background.color);
+border:1px solid $(author.info.border.color);
 padding:5px 5px 5px 20px;
 position:relative;
 margin-top:50px;
@@ -403,9 +508,9 @@ overflow: hidden;      /* fix for long non-text content breaking IE sidebar floa
 float:left;
 width:120px;
 height:120px;
-box-shadow:0px 0px 1px #888888;
+box-shadow:0px 0px 1px $(author.info.img.box.shadow.color);
 border-radius:2px;
-background:#dedede;
+background:$(author.info.img.background.color);
 padding:5px;
 margin:3% 3% 3% 0;
 }
@@ -458,8 +563,8 @@ content:none;
 margin:2em 0 1em 0;
 font-size:30px;
 font-weight: bold;
-color: #585858;
-border-bottom: 2px solid #ddd;
+color:$(comments.count.color);
+border-bottom: 8px solid $(comments.border.color);
 padding-bottom:10px;
 }
 #comments-block {
@@ -485,29 +590,34 @@ color:gray;
 }
 /*.........threaded comments............*/
 .comments .comments-content .comment-header {
-background:#2B547E;
+background:$(comment.header.date.background.color);
 border-radius: 0 2px 2px 0;
+color:$(comment.header.date.text.color);
 }
 .comments .comments-content .comment-header a {
-color:#292929;
+color:$(comment.header.date.text.color);
 }
 .comments .comment-block {
+color:$(comment.content.text.color);
 margin-right: 0;
 }
 .comments .comments-content .comment-content a {
-color:#949494;
+color:$(comment.content.link.color);
 }
 .comments .comment-block a:hover {
 text-decoration:none;
 }
 .comments .comments-content .user {
-background:#ffffff;
+background:$(comment.header.name.background.color);
 padding:4px;
-color:#29292929;
+color:$(comment.header.name.text.color);
 margin-left:-30px;
 margin-right:30px;
 font-size:15px;
 opacity:0.8;
+}
+.comments .comments-content .user a {
+color:$(comment.header.name.text.color);
 }
 .comments .comments-content .icon.blog-author {
 display:none;
@@ -516,7 +626,7 @@ display:none;
 background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVR42mNgwAfKy8v/48I4FeA0AacVDFQBAP9wJkE/KhUMAAAAAElFTkSuQmCC") no-repeat left;
 margin-left:10px;
 padding:15px;
-color:#292929;
+color:$(comment.content.reply.color);
 }
 .comments .comment .comment-actions a:hover {
 text-decoration:none;
@@ -555,17 +665,17 @@ line-height: 1.5em;
 }
 .sidebar h2 {
 margin: 0;
-background:#ffffff;
+background:$(sidebar.widget.background.color);
 padding:10px;
 display:inline-block;
 *display: inline;
 zoom: 1;
 font-size:11px;
-color:#555555;
+color:$(sidebar.title.color);
 font-weight:bold;
 }
 .sidebar ul {
-background-color:#ffffff;
+background-color:$(sidebar.widget.background.color);
 padding:15px 20px;
 list-style:none;
 }
@@ -576,10 +686,10 @@ padding-right:0;
 padding-bottom:.25em;
 }
 .sidebar ul li a {
-color:#888;
+color:$(sidebar.link.color);
 }
 .sidebar .widget {
-border-bottom:8px solid #eee;
+border-bottom:8px solid $(sidebar.widget.border.color);
 margin:0;
 padding:1.5em;
 }
@@ -638,9 +748,9 @@ font: normal normal 86% Arial, sans-serif;
 /* Footer
 ----------------------------------------------- */
 footer {
-background:#fafafa;
+background:$(foot.background.color);
 z-index:10;
-border-top:1px solid #d6d6d6;
+border-top:1px solid $(foot.border.color);
 padding:50px 50px 40px;
 position:relative;
 }
@@ -654,7 +764,7 @@ footer .footer-content {
 float:left;
 width:23%;
 font-size:12px;
-color:#6d6d6d;
+color:$(footer.text.font.color);
 margin-right:6%;
 }
 footer .footer-content a {
@@ -662,9 +772,9 @@ margin: 3px 0;
 }
 footer .footer-content h2 {
 margin:0;
+color:$(footer.title.color);
 font-weight:bold;
 font-size:13px;
-color:#6d6d6d;
 text-transform:uppercase;
 }
 footer .footer-content p {
@@ -676,17 +786,18 @@ width:14%;
 margin-right:3%;
 }
 footer .footer-navigation a {
+font:$(post.title);
 margin:0 100px 5px 0;
 white-space:nowrap;
 display:inline-block;
 font-weight:bold;
-color:#777777;
+color:$(footer.nav.color);
 text-decoration:none;
 font-size:13px;
 }
 footer .footer-navigation p {
 width:161px;
-color:#999999;
+color:$(footer.nav.text.color);
 font-size:11px;
 }
 footer .footer-featured {
@@ -725,6 +836,30 @@ display:none
 }
 /*.......................Button
 .................................................*/
+.readmore a {
+right:0; 
+bottom:0px;
+z-index:10; 
+background:$(read.background.color);
+box-shadow:0pt 0pt 5px $(read.shadow.inside.color) inset, 0pt 1px 1px $(read.shadow.outside.color); 
+padding:5px 15px 5px 15px;  
+border-radius:3px 0 0 3px; 
+border-top:2px; 
+border-right:2px; 
+border-bottom:2px; 
+border-left:2px; 
+margin:10px 0 10px 0;
+display:inline-block;
+float:right;
+color:$(read.text.color); 
+font-size:11px; 
+text-shadow:1px 1px 0pt rgba(0, 0, 0, 0.2);
+font-family:Tahoma,Arial,Helvetica,sans-serif;
+text-decoration:none;
+}
+.readmore a:hover{
+background-color:$(read.hover.color);
+}
 .button {
 display:inline-block;
 text-transform:uppercase;
@@ -736,37 +871,43 @@ padding:1em 1.5em 0.75em;
 border-radius:2px;
 font-weight:bold;
 border:none;
-color:#fff !important;
+color:$(blueredgreen.text.color);
 text-decoration:none;
 font-family:'Open Sans Condensed',sans-serif;
 font-size:14px;
 line-height:1;
 cursor:pointer
 }
-.button:hover {
+a.button:hover {
 opacity:0.9
 }
 .button.blue {
-background-color:#93d0ea;
-box-shadow:0 0 5px #8fcde7 inset, 0 1px 1px #eee;
+background-color:$(blue.background.color);
+color:$(blueredgreen.text.color);
+box-shadow:0 0 5px $(blue.shadowinside.color) inset, 0 1px 1px $(blue.shadowoutside.color);
 }
 .button.blue1 {
-background-color:#93d0ea;
+background-color:$(blue.background.color);
 }
 .button.green {
-background-color:#a5d16d;
-box-shadow:0 0 5px #a4cf6c inset, 0 1px 1px #eee;
+background-color:$(green.background.color);
+color:$(blueredgreen.text.color);
+box-shadow:0 0 5px $(green.shadowinside.color) inset, 0 1px 1px $(green.shadowoutside.color);
+}
+.button.green:hover{
+opacity:0.9
 }
 a.button.green.big,a.button.green.medium,a.button.green.small {
 text-decoration:none;
 font-weight:bold;
 }
 .button.red {
-background-color:#f4836a;
-box-shadow:0 0 5px #ef7f65 inset, 0 1px 1px #eee;
+background-color:$(red.background.color);
+color:$(blueredgreen.text.color);
+box-shadow:0 0 5px $(red.shadowinside.color) inset, 0 1px 1px $(red.shadowoutside.color);
 }
 .button.red1 {
-background-color:#f4836a;
+background-color:$(red.background.color);
 }
 .button.orange {
 background-color:#ff8b62;
@@ -783,7 +924,8 @@ padding:1.2em 2.5em 1em;
 .................Sidear icon....
 ................*/
 #sidebar .sidebar-group.about {
-line-height:1.8;color:#747474;
+line-height:1.8;
+color:$(sidebar.Social.text.color);
 padding:20px;
 }
 #sidebar .sidebar-group h5 {
@@ -912,7 +1054,8 @@ margin-left:-18px
 }
 /* ----- related-post----- */
 .related-posts-title {
-background:#ffffff;
+background:$(related.posts.background.color);
+color:$(related.title.color);
 display:inline-block;
 padding:10px;
 font-size:20px;
@@ -920,7 +1063,7 @@ border-radius:2px 2px 0 0;
 }
 #related-posts {
 list-style:none;
-background-color:#fff;
+background-color:$(related.posts.background.color);
 overflow:hidden;
 padding:2em 1em 2em 5em;
 border-radius:2px;
@@ -943,12 +1086,11 @@ padding-top: 0em;
 }
 #related-posts a {
 padding:0;
-border-left:0.5px solid #ffffff;
-background:#fff;
+border-left:0.5px solid transparent;
 float:left;
 margin-right:10px;
 width:150px;
-color:#555 !important;
+color:$(related.posts.link.color);
 text-decoration:none !important;
 display:block;
 }
@@ -978,25 +1120,19 @@ background:#f4f4f4;
 {--------}  pagenav  {--------}
 ----------------------------------------*/
 .showpageNum a,.showpage a {
-background-color:#f2f2f2;
+background-color:$(Unactive.backgroundNavigation.color);
 text-decoration:none;
 white-space:nowrap;
-color:#222;
+color:$(Unactive.text.color);
 margin:10px 3px;
 padding:5px 10px;
-border-top:1px solid #dddddd;
-border-right:1px solid #dddddd;
-border-bottom:1px solid #dddddd;
-border-left:1px solid #dddddd;
+border:1px solid $(Unactive.Border.color);
 }
 .showpageNum a:hover,.showpage a:hover {
-color:#fff;
+color:$(active.text.color);
 text-decoration:none;
-background-color:#514b49;
-border-top:1px solid #514b49;
-border-right:1px solid #514b49;
-border-bottom:1px solid #514b49;
-border-left:1px solid #514b49;
+background-color:$(active.backgroundNavigation.color);
+border:1px solid $(active.backgroundNavigation.color);
 }
 .showpageOf {
 float:right;
@@ -1004,16 +1140,13 @@ margin:0;
 opacity:0.5
 }
 .showpagePoint {
-color:#fff;
+color:$(active.text.color);
 text-decoration:none;
-background-color:#363231;
+background-color:$(active.backgroundNavigation.color);
 font-size:12px;
 margin:10px 3px;
 padding:5px 10px;
-border-top:1px solid #363231;
-border-right:1px solid #363231;
-border-bottom:1px solid #363231;
-border-left:1px solid #363231;
+border:1px solid $(active.backgroundNavigation.color);
 }
 .feed-links {
 clear:both;
@@ -1094,6 +1227,102 @@ padding-top:1em;
 padding-bottom:1.2em;
 font-size:20px;
 }
+.blog-pager,#blog-pager{
+background:$(post.background.color);
+}
+/*
+Email Subscriber
+------------------------*/
+#sidebar-subscribe-box {
+width:95.54%;
+background-image: linear-gradient(right 0, $(email.left.background.color) 6%, $(email.right.background.color) 100%);
+background-image: -o-linear-gradient(right 0, $(email.left.background.color) 6%, $(email.right.background.color) 100%);
+background-image: -moz-linear-gradient(right 0, $(email.left.background.color) 6%, $(email.right.background.color) 100%);
+background-image: -webkit-linear-gradient(right 0, $(email.left.background.color) 6%, $(email.right.background.color) 100%);
+background-image: -ms-linear-gradient(right 0, $(email.left.background.color) 6%, $(email.right.background.color) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	right 0,
+	left top,
+	color-stop(0.06, $(email.left.background.color)),
+	color-stop(1, $(email.right.background.color))
+);
+    border: 1px solid $(email.border.color);
+box-shadow:1x 1px 1px $(email.border.color) inset;
+height:265px;
+    border-radius: 3px;
+    padding: 3px 0;
+position:relative;
+}
+.sidebar-subscribe-box-wrapper,.sidebar-subscribe-box-wrapper p {
+    color: $(email.text.color);
+    font-size: 30px;
+    line-height: 10px;
+margin-top:20px;
+    padding: 1px 29px 0;
+    text-align: left;
+}
+.Subscriber .widget-content{
+margin:2.5em 0 0;
+}
+.Subscriber h2{
+margin:35px 0 0;
+font-size:20px;
+}
+.sidebar-subscribe-box-form {
+    clear: both;
+    display: block;
+    margin: 10px 0;
+}
+form.sidebar-subscribe-box-form {
+    clear: both;
+    display: block;
+    margin: 10px 0 0;
+    width: auto;
+}
+.sidebar-subscribe-box-email-field {
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background:$(email.form.background.color);
+border:1px solid $(email.form.background.color);
+    color: $(email.form.text.color);
+line-height:1;
+font-size:15px;
+    padding: 10px 20px;
+    position:absolute;
+top:125px;
+left:59px;
+    width: 250px;
+}
+.sidebar-subscribe-box-email-button {
+background:$(email.submit.background.color);
+border:1px solid $(email.submit.background.color);
+border-radius:2px;
+box-shadow:0px 0 1px $(email.submit.shadow.color) inset;
+border:none;
+color: $(email.submit.text.color);
+cursor: pointer;
+font-family: Arial;
+font-weight: 600;
+padding: 10px;
+position:absolute;
+top:190px;
+left:59px;
+text-shadow: 1px 1px 0 rgba(255,255,255,.2);
+width:100%;
+max-width:100px;
+}
+.sidebar-subscribe-box-email-button:hover,.sidebar-subscribe-box-email-button:focus {
+    background:$(email.submit.hover.color);
+}
+iframe,object,embed,.yt-border iframe,.yt-border object,.yt-border embed,table {
+    width: 100%;
+}
+.clear{
+clear:both;
+}
 ]]></b:skin>
     <!-- //404 error page// -->
     <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
@@ -1139,8 +1368,10 @@ font-size:20px;
       @media all and (max-width: 840px) {
         h1{position:static;width:auto;padding:10px 0 20px 0;margin:0;text-align:center;}
         h1 a{font-size:36px !important;}
-        header nav{position:static;width:auto;margin:0 !important;text-align:center;padding-right:0}
+        header{height:90px}
+        header nav{position:static;width:auto;margin:0 !important;text-align:center;padding-right:0;}
         header nav a{padding:5px;font-size:18px;margin:0 10px}
+        #sidebar-subscribe-box{width:100%}
         .post{width:100%;text-align:center}
         .post h2 a{font-size:28px}
         .post-body{padding:3em}
@@ -1152,12 +1383,16 @@ font-size:20px;
       }
       @media all and (max-width: 600px) {
         .content-wrapper{margin:20px}
+        #sidebar-subscribe-box{display:none}
+        .Subscriber .widget-content{margin:0;}
+         .Subscriber h2{display:none}
         .post h2{padding:2em}
         .post h2 a{font-size:24px;text-align:left}
         .post-body{padding:2em;font-size:15px}
         header a.search{margin-top:-45px;}
         h1{padding:10px 0 10px 0}
-        header select{width:96%;font:inherit;font-size:14px;padding:4px;margin:0 2% 2%;
+        .recentpost_title{padding-top:5px}
+        header select{width:96%;font:inherit;font-size:14px;padding:4px;margin:0 2% 2%}
         }
         @media all and (max-width: 400px) {
           .content-wrapper{margin:10px}
@@ -1177,21 +1412,13 @@ font-size:20px;
           .main-wrapper{
             width:70%;
           }
-          .date-header {
-            background:url(http://3.bp.blogspot.com/-1MEONG9XUgA/T0uOF8ICEdI/AAAAAAAAA-k/VBwTnA8PXbI/s1600/clock_icon.gif) no-repeat left;
-            color:#292929 !important; padding: 5px 15px 5px 20px;  margin:10px 0 10px 25px;display:inline-block;opacity:0.5;
-          }
           .post-footer {display:none;}
-          .post {
-            background:#ffffff;
-            box-shadow:0 0 1px rgb(204,204,204);
+          .post{
             display:inline-block;
             width:46.1%;
             margin:0 3% 3% 0;
-            word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
-            overflow: hidden;      /* fix for long non-text content breaking IE sidebar float */
           }
-          .post-body {
+          .post-body{
             margin:0 0 .75em;
             padding:0;
             line-height:1.6em;
@@ -1202,51 +1429,23 @@ font-size:20px;
           .post img {
             margin:0;
           }
-          .post-body p {
+          .post-body p{
             padding:10px 30px 0;
             font-size:14px;
-            color:#4b4b4b;
+            color:$(post.text.font.color);
           }   
           .post h2 {
-            padding:0;
+           padding:0;
           }
           .post h2 a, .post h2 a:visited, .post h2 strong {
-            display:block;
-            text-decoration:none;
-            color:#000000;
             padding:30px;
             white-space:normal;
           }
           .post h2 a:hover {color:#514b49;}
-           .readmore a {
-            right:0; 
-            bottom:0px; 
-            z-index:10; 
-            background-color:#363231; 
-            box-shadow:0pt 0pt 5px #514b49 inset, 0pt 1px 1px #eeeeee; 
-            padding: 5px 15px 5px 15px;  
-            border-radius:3px 0 0 3px; 
-            border-top:2px; 
-            border-right:2px; 
-            border-bottom:2px; 
-            border-left:2px; 
-            margin:10px 0 10px 0;
-            display:inline-block;
-            float:right;
-            color:#ffffff !important; 
-            font-size:11px; 
-            text-shadow:1px 1px 0pt rgba(0, 0, 0, 0.2);
-            font-family:Tahoma,Arial,Helvetica,sans-serif;
-            text-decoration:none;
-          }
-          .readmore a:hover{
-            background-color:#514b49;
-          }
           .post-timestamp,.feed-links {
             display:none
           }
           .blog-pager,#blog-pager{
-            background-color:#fff;
             border-radius:2px;
             text-align:left;
             padding:2em 25px;
@@ -1363,6 +1562,25 @@ font-size:20px;
 <div class='ie7_8'>
       <div class='content-wrapper'>
         <div class='main-wrapper'>
+          <b:if cond='data:blog.url == data:blog.homepageUrl'>
+        <b:section class='Subscriber' id='header2' maxwidgets='4' showaddelement='yes'>
+          <b:widget id='HTML8' locked='false' title='Be Cool and Join Us' type='HTML'>
+            <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+          </b:widget>
+        </b:section>
+        <div class='clear'/>
+      </b:if>
+          
           <b:section class='main' id='main' showaddelement='no'>
             <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
               <b:includable id='main' var='top'>
@@ -1905,14 +2123,14 @@ font-size:20px;
                             <data:post.title/>
                           </a>
                           <b:if cond='data:blog.pageType == &quot;item&quot;'>
-                            <font style='background:transparent url(http://1.bp.blogspot.com/--fsYbwHKiKM/T0uOGw-hdTI/AAAAAAAAA-s/QBcDITiSCEs/s1600/author.gif) no-repeat scroll top left;padding-left:20px;font-size:11px;opacity:0.8'>
+                            <font style='background:transparent url(http://4.bp.blogspot.com/-XdiSD662J0w/Um-6uT9UYaI/AAAAAAAAA_k/xVOVLVBVZEg/s1600/author_icon.png) no-repeat scroll top left;padding-left:16px;font-size:11px;opacity:0.8'>
                               <data:post.author/>
                             </font>
-                            <font style='background:transparent url(http://3.bp.blogspot.com/-1MEONG9XUgA/T0uOF8ICEdI/AAAAAAAAA-k/VBwTnA8PXbI/s1600/clock_icon.gif) no-repeat scroll top left;margin-left:10px;padding-left:20px;font-size:11px;opacity:0.8'>
+                            <font style='background:transparent url(http://2.bp.blogspot.com/-LtL0QV6cIvU/Um-1TD7g5ZI/AAAAAAAAA-w/TrZ0-TFj29g/s1600/icon_clock.png) no-repeat scroll top left;margin-left:5px;padding-left:20px;font-size:11px;opacity:0.8'>
                               <data:post.dateHeader/>
                             </font>
                             <b:if cond='data:post.allowComments'>
-                              <font style='background:transparent url(http://4.bp.blogspot.com/-wGMp3jZ7DpU/T0uOrczut7I/AAAAAAAAA-0/F_BnJ5WS9BI/s1600/comment-icon.png) no-repeat scroll top left;padding-left:20px;font-size:11px;margin-left:5px;opacity:0.8'>
+                              <font style='background:transparent url(http://1.bp.blogspot.com/-apcvL73OxWA/Um-5Vp9bd9I/AAAAAAAAA_Y/Wk4geiBnKMM/s1600/icon_comment.png) no-repeat scroll top left;padding-left:20px;font-size:11px;margin-left:5px;opacity:0.8'>
                                 <b:if cond='data:post.numComments == 0'>
                                   No Comment
                                   <b:else/>
